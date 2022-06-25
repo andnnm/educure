@@ -1,0 +1,612 @@
+@charset "UTF-8";
+/* ------------- reset ------------- */
+body, h1, h2, h3, h4, h5, h6, p, address,
+ul, ol, li, dl, dt, dd, img, form, table, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: none;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 100%;
+	text-align: left;
+	list-style-type: none;
+	border-collapse: collapse;
+}
+
+textarea { font-size: 100%; vertical-align:middle;}
+img { border-style: none; display: block; }
+hr { display: none; }
+em{font-style: normal}
+input{line-height:auto;vertical-align:middle;}
+strong.more{color:#c30}
+a{text-decoration: none;}
+
+
+body {
+	font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+}
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;	
+	box-sizing: border-box;
+}
+/* --------------------------------- */
+
+/* ------------- 共通 ------------- */
+.inner{
+	padding: 0 50px;
+}
+
+.img{
+	object-fit: cover;
+	width: 100%;
+}
+
+.title_font{
+	font-weight: bold;
+}
+
+.h2{
+	font-size: 30px;
+	margin-bottom: 10px;
+}
+
+.section{
+	margin-bottom: 50px;
+}
+
+
+.must{
+	color: red;
+}
+
+
+/* -------------- ヘッダー -------------- */
+
+
+.top_cl{
+	color: rgb(228, 225, 225);
+}
+
+
+.top_attention_bar{
+    background-color: rgba(0, 0, 0, 0.901);
+	padding: 20px;
+	text-align: center;
+	font-size: 14px;
+	text-decoration: underline;
+	width: 100%;
+}
+
+.top_attention_bar a {
+	color: white;
+}
+
+.top_attention_bar a:hover{
+	color: rgb(183, 182, 182);
+}
+
+
+
+.top_header_wp{
+	position: relative;
+	height: 630px;
+	width: 100%;
+}
+
+.top_img{
+	opacity: 0.8;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 645px;
+}
+
+.top_header{
+	padding: 20px 32px;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	position: absolute;
+	top: 0;
+	align-items: center;
+}
+
+body:not(.toppage) .top_header{
+	width: 100%;
+	position: relative;
+	top: 0;
+	background-color: rgb(53, 52, 52);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 20px;
+}
+
+
+.top_navbar{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.fixed{
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 3;
+	width: 100%;
+	padding: 20px 32px;
+	background-color: rgba(0, 0, 0, 0.723);
+	transition: background-color .5s ease;
+}
+
+
+.top_nav{
+	text-align: center;
+}
+
+.top_nav ul{
+	display: flex;
+	width: 100%;
+}
+
+.top_nav ul li{
+	margin-left: 30px;
+}
+
+.top_nav .top_cl:hover{
+	color: rgb(171, 169, 169);
+}
+
+
+.signin .top_cl:hover{
+	color: rgb(171, 169, 169);
+}
+
+.top_eyecatch{
+	position: absolute;
+	top: 240px;
+	left: 90px;
+	font-size: 60px;
+	font-weight: bold;
+}
+/* -------------- (ヘッダー) -------------- */
+
+/* -------------- フッター -------------- */
+
+.footer_wp{
+	padding-top: 50px;
+	padding-bottom: 50px;
+	background-color: rgb(228, 230, 230);
+	border-top: 1px solid rgb(180, 179, 179);
+}
+
+.footer_link{
+	display: flex;
+	margin-bottom: 20px;
+	justify-content: space-between;
+	border-bottom: 1px solid rgb(180, 179, 179);
+}
+
+.footer_list{
+	width: 23%;
+	font-size: 0.9rem;
+}
+
+.footer_list li{
+	margin-bottom: 15px;
+}
+
+.footer_list a{
+	color: rgb(82, 81, 81);
+}
+
+
+
+.footer_policy{
+	font-size: 0.8rem;
+	color: rgb(82, 81, 81);
+}
+
+.footer_policy_link{
+	display: flex;
+	justify-content: flex-start;
+}
+
+.footer_policy_link li{
+	margin-right: 10px;
+}
+
+.footer_policy_link li a{
+	color: rgb(82, 81, 81);
+}
+
+.footer_policy_link li a:hover{
+	color: rgb(129, 128, 128);
+}
+/* -------------- (フッター) -------------- */
+
+/* -------------- section choise_location -------------- */
+
+.choise_area{
+	display: grid;
+	grid-template-columns: repeat(4,1fr);
+}
+
+.choise_city{
+	display: flex;
+	align-items: center;
+	margin-bottom: 15px;
+}
+
+.choise_city_img{
+	margin-right: 10px;
+}
+
+
+.city_img{
+	width: 60px;
+	height: 60px;
+	object-fit: cover;
+	border-radius: 5px;
+}
+
+.choise_city_sentence{
+	width: 60%;
+	font-size: 13px;
+}
+
+/* -------------- section 好きなロケーションを選ぼう -------------- */
+
+.favorite_location{
+	width: 100%;
+}
+.atmosphere_wrapper{
+	display: flex;
+	width: 100%;
+}
+
+
+
+.atmosphere_img{
+	object-fit: cover;
+	width: 	80%;
+	height: auto;
+	border-radius: 5px;
+	justify-content: space-between;
+	margin-bottom: 5px;
+}
+
+.atmosphere_detail > p{
+	font-size: 18px;
+}
+
+
+/* -------------- section Go To Eats -------------- */
+
+
+.GoToEats_wrapper{
+	position: relative;
+	height: 300px;
+}
+
+
+
+.GoTo_img{
+	position: absolute;
+	top: 0;
+	z-index: 1;
+	object-fit: cover;
+	width: 100%;
+	max-height: 300px;
+	border-radius: 10px;
+}
+
+.GoTo_explain{
+	background-color: rgba(255, 255, 255, 0.429);
+	z-index: 2;
+	position: absolute;
+	top: 50px;
+	left: 40px;
+	padding: 10px;
+}
+
+.GoTo_explain_upper{
+	font-size: 40px;
+}
+
+/* -------------- section カフェ作り体験 -------------- */
+
+.experience{
+	background-color: black;
+	padding: 50px 0;
+}
+
+.experience_job{
+	display: flex;
+	justify-content: space-between;
+}
+
+
+.experience_title{
+	color: white;
+	padding-bottom: 20px;
+}
+
+.job_box{
+	width: 32%;
+}
+
+.job_img{
+	object-fit: cover;
+	width: 100%;
+	height: auto;
+	border-radius: 10px;
+}
+
+.job_exp{
+	color: white;
+	margin-top: 5px;
+}
+
+.job_title{
+	font-size: 18px;
+}
+
+.job_sentence{
+	font-size: 14px;
+}
+
+/* -------------- section ホストに仲間入り -------------- */
+
+.host_group{
+	display: flex;
+	justify-content: space-between;
+}
+
+.host_group_list{
+	width: 32%;
+}
+
+.host_img{
+	object-fit: cover;
+	width: 100%;
+	height: auto;
+	border-radius: 10px;
+}
+
+.hostName{
+	margin-top: 5px;
+	font-size: 18px;
+}
+
+/* -------------- トップへ戻る -------------- */
+
+#page_top{
+	width: 150px;
+	height: 50px;
+	background-color: rgb(0, 0, 0);
+	z-index: 2;
+	display: flex;
+	align-items: center;
+	position: fixed;
+	right: 0;
+	bottom: 0;
+}
+
+#page_top a{
+	color: white;
+	width: 100%;
+	text-align: center;
+}
+
+/* -------------- サインイン -------------- */
+
+.signinPop{
+	position: fixed;
+	top: 40px;
+	left: 30%;
+	background: rgb(255, 255, 255);
+	width: 40%;
+	border-radius: 10px;
+	padding: 10px;
+	display: none;
+	z-index: 4;
+}
+
+.signinTitle{
+	margin: 0px auto;
+	padding: 20px 0;
+	border-bottom: 1px solid rgb(182, 182, 182);
+}
+
+.signinTitle h2{
+	font-weight: bold;
+	font-size: 20px;
+	text-align: center;
+}
+
+.signinForm{
+	padding: 20px 5px;
+	border-bottom: 1px solid rgb(182, 182, 182);
+}
+
+.input{
+	margin: 5px auto;
+	width: 100%;
+	height: 40px;
+	border: 0.8px solid rgb(121, 121, 121);
+	border-radius: 8px;
+}
+
+.signinForm > .input:last-child{
+	border: none;
+	background: rgb(198, 36, 106);
+	color: white;
+	font-size: 20px;
+}
+
+.snsLink{
+	width: 100%;
+	height: 45px;
+	border: 0.8px solid rgb(182, 182, 182);
+	border-radius: 8px;
+	margin: 15px auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.snsImg{
+	width: 25px;
+	height: 25px;
+	object-fit: contain;
+	margin: 0 auto;
+}
+
+#overlay{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.3);
+	display: none;
+	z-index: 3;
+}
+
+
+
+/* -------------- お問合せページ -------------- */
+.form{
+	border: 1px solid rgb(180, 178, 178);
+	border-radius: 10px;
+	width: 60%;
+	margin: 40px auto;
+}
+
+.form_top{
+	padding: 15px 0;
+	border-bottom: 1px solid rgb(180, 178, 178);
+}
+
+.form_title{
+	text-align: center;
+	font-size: 20px;
+}
+
+.inner2{
+	padding: 0 15px;
+}
+
+.guide{
+	border-bottom: 1px solid rgb(151, 149, 149);
+	border-top: 1px solid rgb(151, 149, 149);
+	background-color: rgb(230, 230, 230);
+	margin: 13px 0;
+	padding: 4px;
+}
+
+.contact_2_sentence_lower{
+	font-size: 14px;
+}
+
+.contact_form_input{
+	margin: 13px 0;
+}
+
+.input_form{
+	width: 100%;
+	padding: 8px 5px;
+	font-size: 18px;
+	border: 1px solid rgb(151, 149, 149);
+	border-radius: 5px;
+}
+
+textarea{
+	width: 100%;
+	border: 1px solid rgb(151, 149, 149);
+	border-radius: 5px;
+	font-size: 18px;
+}
+
+
+
+.button{
+	margin: 10px auto;
+	width: 100%;
+	font-size: 18px;
+	background-color: rgb(198, 36, 106);
+	padding: 10px 0;
+	border: 1px solid rgb(198, 36, 106);
+	border-radius: 5px;
+	color: white;
+}
+
+.err_msg{
+	color: red;
+}
+
+/* -------------- 確認ページ -------------- */
+.form_lower{
+	margin: 20px 0;
+	font-size: 14px;
+}
+
+.check_item{
+	border-bottom: 0.8px solid rgb(180, 178, 178);
+}
+
+.check_contents{
+	padding-left: 5px;
+	font-size: 18px;
+	margin: 10px 0 20px;
+}
+
+.confirm_button{
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 30px;
+}
+
+.submit_button{
+	background-color: rgb(198, 36, 106);
+	border: 1px solid rgb(198, 36, 106);
+	font-size: 16px;
+	width: 45%;
+	border-radius: 5px;
+	color: white;
+	padding: 10px 0;
+}
+
+.return_button{
+	border: 2px solid rgb(58, 113, 53);
+	color: rgb(58, 113, 53);
+	width: 45%;
+	border-radius: 5px;
+	font-size: 16px;
+	padding: 10px 0;
+}
+
+/* -------------- コンプリートページ -------------- */
+.return_toppage{
+	margin: 10px 0;
+}
+
+.return_toppage a{
+	font-size: 16px;
+	text-decoration: underline;
+}
+
+.complete_form{
+	margin-top: 10px;
+}
+
+.complete_form_lower{
+	font-size: 14px;
+}
